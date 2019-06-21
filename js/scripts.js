@@ -6,9 +6,9 @@
 
 // Business Logic for AddressBook ---------
 //main constructor
-function AddressBook() {
-  this.contacts = [],
-  this.currentId = 0
+function PizzaPalace() {
+  this.size = ,
+  this.toppings = []
 }
 //pushes contacts with id to the addressBook
 AddressBook.prototype.addContact = function(contact) {

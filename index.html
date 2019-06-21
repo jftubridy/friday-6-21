@@ -18,7 +18,7 @@
         <div class="col-md-6">
           <form id="newPizza">
             <!-- name/address-->
-            <div class="form-group">
+            <!-- <div class="form-group">
               <label for="new-first-name">First Name</label>
               <input type="text"  class="form-control" id="new-first-name">
             </div>
@@ -40,36 +40,54 @@
                 <option>Work Email</option>
               </select>
               <input type="text"  class="form-control" id="firstAddress">
-            </div>
+            </div> -->
             <!-- size -->
             <select class="form-control" id="size">
-              <option value="1" >Small</option>
+              <option value="1">Small</option>
               <option value="2">Medium</option>
               <option value="3">Large</option>
               <option value="4">Party</option>
             </select>
 
             <!-- toppings-->
-            <div class="radio">
+            <div class="checkbox">
               <label>
-                <input type="radio" name="top" value="pepperoni" checked>
+                <input type="checkbox" name="top" value="pepperoni">
                 Pepperoni
               </label>
             </div>
-            <div class="radio">
+            <div class="checkbox">
               <label>
-                <input type="radio" name="top" value="greenPepper">
+                <input type="checkbox" name="top" value="anchovies">
+                Anchovies
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="top" value="artichoke">
+                Artichoke
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="top" value="sausage">
+                Sausage
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="top" value="greenPepper">
                 Green Pepper
               </label>
             </div>
-            <div class="radio">
+            <div class="checkbox">
               <label>
-                <input type="radio" name="top" value="mushroom">
+                <input type="checkbox" name="top" value="mushroom">
                 Mushroom
               </label>
             </div>
             <!-- not needed now, save if needed to add later -->
-            <div class="form-group">
+            <!-- <div class="form-group">
               <label for="thirdAddress"></label>
               <select class="form-control" id="thirdType">
                 <option>Home Address</option>
@@ -88,7 +106,7 @@
                 <option>Work Email</option>
               </select>
               <input type="text"  class="form-control" id="fourthAddress">
-            </div>
+            </div> -->
 
 
             <!-- <div class="form-group">
@@ -103,7 +121,7 @@
           </ul>
         </div>
         <div class="col-md-6">
-          <div id="show-contact">
+          <div id="show-pizza">
             <p>First Name: <span class="first-name"></span></p>
             <p>Last Name: <span class="last-name"></span></p>
             <p>Phone Number: <span class="phone-number"></span></p>
@@ -118,7 +136,7 @@
         </div>
       </div>
     </div>
-    <!--go back and get the radio buttons to select for toppings, tie these into the inputs for the pizza constructors.  -->
+    <!--go back and get the CHECKBOXES INSTEAD!! to select for toppings, tie these into the inputs for the pizza constructors.  -->
 
   </body>
 </html>

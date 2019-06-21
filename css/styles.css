@@ -1,0 +1,9 @@
+
+#show-contact {
+display: none;
+}
+
+.checkbox {
+  padding: 10px;
+  display: inline-block;
+}
