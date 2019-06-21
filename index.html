@@ -10,6 +10,104 @@
     <title>Friday Project</title>
   </head>
   <body>
+    <div class="container">
+      <h1>Choose Your Pizza Toppings</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <hr>
+          <h2>Add a Contact:</h2>
+          <form id="new-contact">
+            <div class="form-group">
+              <label for="new-first-name">First Name</label>
+              <input type="text"  class="form-control" id="new-first-name">
+            </div>
+            <div class="form-group">
+              <label for="new-last-name">Last Name</label>
+              <input type="text"  class="form-control" id="new-last-name">
+            </div>
+            <div class="form-group">
+              <label for="new-phone-number">Phone Number</label>
+              <input type="text"  class="form-control" id="new-phone-number">
+            </div>
+            <div class="form-group">
+              <label for="firstAddress">Address</label>
+              <select class="form-control" id="firstType">
+                 <option></option>
+                <option>Home Address</option>
+                <option>Work Address</option>
+                <option>Personal Email</option>
+                <option>Work Email</option>
+              </select>
+              <input type="text"  class="form-control" id="firstAddress">
+            </div>
+            <div class="form-group">
+              <label for="secondAddress"></label>
+              <select class="form-control" id="secondType">
+                <option>Home Address</option>
+                <option>Work Address</option>
+                <option>Personal Email</option>
+                <option>Work Email</option>
+              </select>
+              <input type="text"  class="form-control" id="secondAddress">
+            </div>
+            <div class="form-group">
+              <label for="thirdAddress"></label>
+              <select class="form-control" id="thirdType">
+                <option>Home Address</option>
+                <option>Work Address</option>
+                <option>Personal Email</option>
+                <option>Work Email</option>
+              </select>
+              <input type="text"  class="form-control" id="thirdAddress">
+            </div>
+            <div class="form-group">
+              <label for="fourthAddress"></label>
+              <select class="form-control" id="fourthType">
+                <option>Home Address</option>
+                <option>Work Address</option>
+                <option>Personal Email</option>
+                <option>Work Email</option>
+              </select>
+              <input type="text"  class="form-control" id="fourthAddress">
+            </div>
+
+
+            <!-- <div class="form-group">
+              <label for="homeAddress">Home Address</label>
+              <input type="text"  class="form-control" id="homeAddress">
+            </div> -->
+            <button type="submit" class="btn-danger">Add</button>
+          </form>
+          <hr>
+          <h2>Contacts:</h2>
+          <ul id="contacts">
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <div id="show-contact">
+            <p>First Name: <span class="first-name"></span></p>
+            <p>Last Name: <span class="last-name"></span></p>
+            <p>Phone Number: <span class="phone-number"></span></p>
+            <ul id="address">
+              <!-- <span class="Address"></span> -->
+            </ul>
+            <!-- <p>Email: <span class="email"></span></p>
+            <p>Home Address: <span class="homeAddress"></span></p> -->
+            <div id="buttons">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--go back and get the radio buttons to select for toppings, tie these into the inputs for the pizza constructors.  -->
 
   </body>
 </html>
+
+<!--Order Pizza
+Create a website for a pizza company where a user can choose one or more individual toppings (cheese, pepperoni, artichoke, anchovy, etc) and a size to order a pizza and see the final cost.
+
+Allow the user to choose toppings and size for the pizza they'd like to order.
+Create a pizza object constructor with properties for toppings and size.
+Create a prototype method for the cost of a pizza depending on the selections chosen. Use your own formula for this.
+Keep it simple to start! You do not need to have a complex formula for determining cost (although you can if you like). The most important part of this code review is using and demonstrating your understanding of constructors and prototypes. -->
