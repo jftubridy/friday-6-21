@@ -7,16 +7,17 @@
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/scripts.js"></script>
     <meta charset="utf-8">
-    <title>Friday Project</title>
+    <title>Penelope's Pizza Palace</title>
   </head>
   <body>
+    <h1>Welcome to Penelope's Pizza Palace!</h1>
+    <p>Here are Penelope's we specialize in the most reasonably priced pizzas.</p>
     <div class="container">
-      <h1>Choose Your Pizza Toppings</h1>
+      <h3>Choose Your Pizza</h3>
       <div class="row">
         <div class="col-md-6">
-          <hr>
-          <h2>Add a Contact:</h2>
-          <form id="new-contact">
+          <form id="newPizza">
+            <!-- name/address-->
             <div class="form-group">
               <label for="new-first-name">First Name</label>
               <input type="text"  class="form-control" id="new-first-name">
@@ -32,7 +33,7 @@
             <div class="form-group">
               <label for="firstAddress">Address</label>
               <select class="form-control" id="firstType">
-                 <option></option>
+                <option></option>
                 <option>Home Address</option>
                 <option>Work Address</option>
                 <option>Personal Email</option>
@@ -40,16 +41,34 @@
               </select>
               <input type="text"  class="form-control" id="firstAddress">
             </div>
-            <div class="form-group">
-              <label for="secondAddress"></label>
-              <select class="form-control" id="secondType">
-                <option>Home Address</option>
-                <option>Work Address</option>
-                <option>Personal Email</option>
-                <option>Work Email</option>
-              </select>
-              <input type="text"  class="form-control" id="secondAddress">
+            <!-- size -->
+            <select class="form-control" id="size">
+              <option value="1" >Small</option>
+              <option value="2">Medium</option>
+              <option value="3">Large</option>
+              <option value="4">Party</option>
+            </select>
+
+            <!-- toppings-->
+            <div class="radio">
+              <label>
+                <input type="radio" name="top" value="pepperoni" checked>
+                Pepperoni
+              </label>
             </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="top" value="greenPepper">
+                Green Pepper
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="top" value="mushroom">
+                Mushroom
+              </label>
+            </div>
+            <!-- not needed now, save if needed to add later -->
             <div class="form-group">
               <label for="thirdAddress"></label>
               <select class="form-control" id="thirdType">
@@ -76,11 +95,11 @@
               <label for="homeAddress">Home Address</label>
               <input type="text"  class="form-control" id="homeAddress">
             </div> -->
-            <button type="submit" class="btn-danger">Add</button>
+            <button type="submit" class="btn-info">Add</button>
           </form>
-          <hr>
-          <h2>Contacts:</h2>
-          <ul id="contacts">
+          <!-- change to show their contact info, then the pizza they ordered-->
+          <h2>Your Contact Information:</h2>
+          <ul id="contactInfo">
           </ul>
         </div>
         <div class="col-md-6">
