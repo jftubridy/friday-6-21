@@ -12,35 +12,11 @@
   <body>
     <h1>Welcome to Penelope's Pizza Palace!</h1>
     <p>Here are Penelope's we specialize in the most reasonably priced pizzas.</p>
-    <div class="container">
+    <div class="container" id="pizzaHeader">
       <h3>Choose Your Pizza</h3>
       <div class="row">
         <div class="col-md-6">
           <form id="newPizza">
-            <!-- name/address-->
-            <!-- <div class="form-group">
-              <label for="new-first-name">First Name</label>
-              <input type="text"  class="form-control" id="new-first-name">
-            </div>
-            <div class="form-group">
-              <label for="new-last-name">Last Name</label>
-              <input type="text"  class="form-control" id="new-last-name">
-            </div>
-            <div class="form-group">
-              <label for="new-phone-number">Phone Number</label>
-              <input type="text"  class="form-control" id="new-phone-number">
-            </div>
-            <div class="form-group">
-              <label for="firstAddress">Address</label>
-              <select class="form-control" id="firstType">
-                <option></option>
-                <option>Home Address</option>
-                <option>Work Address</option>
-                <option>Personal Email</option>
-                <option>Work Email</option>
-              </select>
-              <input type="text"  class="form-control" id="firstAddress">
-            </div> -->
             <!-- size -->
             <select class="form-control" id="size">
               <option value="1">Small: $1</option>
@@ -50,124 +26,97 @@
             </select>
             <!-- toppings-->
             <h3>Each Additional Topping is $1</h3>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="top" value="1">
-                Pepperoni
-              </label>
+            <div class="topChecks">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name="top" value="1">
+                  Pepperoni
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name="top" value="1">
+                  Anchovies
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name="top" value="1">
+                  Artichoke
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name="top" value="1">
+                  Sausage
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name="top" value="1">
+                  Green Pepper
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name="top" value="1">
+                  Mushroom
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name="top" value="1">
+                  Grilled Chicken
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name="top" value="1">
+                  Onion
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name="top" value="1">
+                  Arugala
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name="top" value="1">
+                  Pesto
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name="top" value="1">
+                  Garlic
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name="top" value="1">
+                  Jalapeno
+                </label>
+              </div>
             </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="top" value="1">
-                Anchovies
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="top" value="1">
-                Artichoke
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="top" value="1">
-                Sausage
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="top" value="1">
-                Green Pepper
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="top" value="1">
-                Mushroom
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="top" value="1">
-                Grilled Chicken
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="top" value="1">
-                Onion
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="top" value="1">
-                Arugala
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="top" value="1">
-                Pesto
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="top" value="1">
-                Garlic
-              </label>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="top" value="1">
-                Jalapeno
-              </label>
-            </div>
-            <!-- not needed now, save if needed to add later -->
-            <!-- <div class="form-group">
-              <label for="thirdAddress"></label>
-              <select class="form-control" id="thirdType">
-                <option>Home Address</option>
-                <option>Work Address</option>
-                <option>Personal Email</option>
-                <option>Work Email</option>
-              </select>
-              <input type="text"  class="form-control" id="thirdAddress">
-            </div>
-            <div class="form-group">
-              <label for="fourthAddress"></label>
-              <select class="form-control" id="fourthType">
-                <option>Home Address</option>
-                <option>Work Address</option>
-                <option>Personal Email</option>
-                <option>Work Email</option>
-              </select>
-              <input type="text"  class="form-control" id="fourthAddress">
-            </div> -->
-
-
-            <!-- <div class="form-group">
-              <label for="homeAddress">Home Address</label>
-              <input type="text"  class="form-control" id="homeAddress">
-            </div> -->
-            <button type="submit" class="btn-info">Add</button>
+            <button type="submit" class="btn-info">Order</button>
           </form>
-          <!-- change to show their contact info, then the pizza they ordered-->
-          <h2>Your Contact Information:</h2>
-          <ul id="contactInfo">
+
+          <h2>Your Pizzas:</h2>
+          <ul id="pizzaInfo">
           </ul>
         </div>
         <div class="col-md-6">
           <div id="show-pizza">
-            <p>First Name: <span class="first-name"></span></p>
-            <p>Last Name: <span class="last-name"></span></p>
-            <p>Phone Number: <span class="phone-number"></span></p>
-            <ul id="address">
-              <!-- <span class="Address"></span> -->
+            <p>Size: <span class="size"></span></p>
+            <p>Toppings: <span class="toppings"></span></p>
+            <ul id="toppings">
             </ul>
-            <!-- <p>Email: <span class="email"></span></p>
-            <p>Home Address: <span class="homeAddress"></span></p> -->
-            <div id="buttons">
-            </div>
+            <p>Cost: <span class="cost"></span></p>
+
+            <!-- <div id="buttons">
+            </div> -->
           </div>
         </div>
       </div>
