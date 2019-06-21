@@ -1,43 +1,35 @@
-// Use constructors and prototypes to set up the pizza stuff, have radio buttons insert the values if possible
-
-//Business Logic
-
-//pizza constructor needed to input the size, then added toppings as an array
-
-// Business Logic for AddressBook ---------
-//main constructor
+// Business Logic for Pizza Palace ---------
 function PizzaPalace() {
-  this.size = ,
-  this.toppings = []
+  this.pizzas = [],
+  this.currentId = 0
+//pushes pizzas with id to the PizzaPalace
+PizzaPalace.prototype.myPizza = function(pizza) {
+  pizza.id = this.assignId();
+  this.pizzas.push(pizza);
 }
-//pushes contacts with id to the addressBook
-AddressBook.prototype.addContact = function(contact) {
-  contact.id = this.assignId();
-  this.contacts.push(contact);
-}
-//assigns id to each contact
-AddressBook.prototype.assignId = function() {
+//assigns id to each pizza
+PizzaPalace.prototype.assignId = function() {
   this.currentId += 1;
   return this.currentId;
 }
-//finds the contact by ID within
-AddressBook.prototype.findContact = function(id) {
-  for (var i=0; i< this.contacts.length; i++) {
-    if (this.contacts[i]) {
-      if (this.contacts[i].id == id) {
-        return this.contacts[i];
+//finds the pizza by ID within
+PizzaPalace.prototype.findPizza = function(id) {
+  for (var i=0; i< this.pizzas.length; i++) {
+    if (this.pizzas[i]) {
+      if (this.pizzas[i].id == id) {
+        return this.pizzas[i];
       }
     }
   };
   return false;
 }
-// deletes contacts because fukem the first if allows the input to keep going with removing the contact as well.
-AddressBook.prototype.deleteContact = function(id) {
-  for (var i=0; i< this.contacts.length; i++) {
+// deletes pizza, the first if allows the input to keep going with removing the pizza as well.
+PizzaPalace.prototype.deletePizza = function(id) {
+  for (var i=0; i< this.pizzas.length; i++) {
      // (move past empty arrays)
-    if (this.contacts[i]) {
-      if (this.contacts[i].id == id) {
-        delete this.contacts[i];
+    if (this.pizzas[i]) {
+      if (this.pizzas[i].id == id) {
+        delete this.pizzas[i];
         return true;
       }
     }
@@ -45,51 +37,37 @@ AddressBook.prototype.deleteContact = function(id) {
   return false;
 }
 
-// Business Logic for Contacts ---------
-function Contact(firstName, lastName, phoneNumber, Address) {
-  this.firstName = firstName,
-  this.lastName = lastName,
-  this.phoneNumber = phoneNumber,
-  this.Address = Address
-  // this.email = email
-  // this.homeAddress = homeAddress
-}
-function Address(firstAddress, secondAddress, thirdAddress, fourthAddress){
-  this.firstAddress = firstAddress,
-  this.secondAddress = secondAddress,
-  this.thirdAddress = thirdAddress,
-  this.fourthAddress = fourthAddress
+// Business Logic for Pizza ---------
+function Pizza(size, toppings, cost) {
+  this.size = size,
+  this.toppings = [],
+  // this.cost = size + toppings.length,
 }
 
-
-// puts contact info together
-Contact.prototype.fullName = function() {
-  return this.firstName + " " + this.lastName;
+// puts pizza price together
+Pizza.prototype.cost = function() {
+  return this.size + this.toppings.length;
 }
 
 
 // User Interface Logic ---------
-var addressBook = new AddressBook();
-// puts contact details into list format
-function displayContactDetails(addressBookToDisplay) {
-//this displays the contacts name to be clicked for more info
-  var contactsList = $("ul#contacts");
-  var htmlForContactInfo = "";
-  addressBookToDisplay.contacts.forEach(function(contact) {
-    htmlForContactInfo += "<li id=" + contact.id + ">" + contact.firstName + " " + contact.lastName + "</li>";
+var orderedPizzas = new PizzaPalace();
+// puts pizza details into list format
+function displayPizza(pizzaToDisplay) {
+//this displays the pizza name to be clicked for more info
+  var pizzasList = $("ul#pizzas");
+  var htmlForPizzaInfo = "";
+  pizzaToDisplay.pizzass.forEach(function(pizza) {
+    htmlForPizzaInfo += "<li id=" + contact.id + ">" + pizza.firstName + " " + contact.lastName + "</li>";
   });
   contactsList.html(htmlForContactInfo);
 }
 // shows contact info  and adds button for delete
-function showContact(contactId) {
-  var contact = addressBook.findContact(contactId);
+function showPizza(contactId) {
+  var contact = addressBook.findPizza(contactId);
   $('#show-contact').show();
-  $(".first-name").html(contact.firstName);
-  $(".last-name").html(contact.lastName);
-  $(".phone-number").html(contact.phoneNumber);
-  $('.address').html(contact.Address);
-  // $('.email').html(contact.email);
-  // $('.homeAddress').html(contact.homeAddress);
+  $(".first-name").html(pizza.firstName);
+
   var buttons = $("#buttons");
   buttons.empty();
   buttons.append("<button class ='deleteButton' id =" + + contact.id + ">Delete</button>");
@@ -102,7 +80,7 @@ function attachContactListeners() {
   $("#buttons").on("click", ".deleteButton", function(){
     addressBook.deleteContact(this.id);
     $("#show-contact").hide();
-    displayContactDetails(addressBook);
+    displayPizza(addressBook);
   });
 };
 
@@ -150,7 +128,7 @@ $(document).ready(function() {
     var newContact = new Contact(inputtedFirstName, inputtedLastName, inputtedPhoneNumber, Address);
     // var newAddress = new Address(inputtedFirstAddressType, inputtedSecondAddress, inputtedThirdAddress, inputtedFourthAddress)
     addressBook.addContact(newContact);
-    displayContactDetails(addressBook);
+    displayPizza(addressBook);
   })
 })
 
