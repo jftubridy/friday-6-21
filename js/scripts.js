@@ -1,9 +1,9 @@
 // Business Logic for Pizza ---------
 function Pizza(size, toppings, cost) {
   this.size = size,
-  this.toppings = toppings,
+  this.toppings = []
+  this.cost = cost;
   // this.cost = this.size + this.toppings.length
-  this.cost = 0
 }
 
 // puts pizza price together
@@ -17,13 +17,13 @@ $(document).ready(function() {
   $("form#newPizza").submit(function(event) {
     event.preventDefault();
     var inputtedSize = parseInt($("#size").val());
-
-    var inputtedToppings = parseInt( $("input:checkbox[name=top]:checked").val());
-
+    alert(inputtedSize);
+    var inputtedToppings = $("input:checkbox[name=top]:checked").val();
+    alert(inputtedToppings);
     var customPizza= new Pizza(inputtedSize, inputtedToppings);
     console.log(customPizza.cost);
     $("#show-pizza").append("<li>"+ customPizza +" "+ "<br>" + "</li>");
-
+    alert(toppings.length);
   // clears user-input fields
   $("form")[0].reset();
   });
