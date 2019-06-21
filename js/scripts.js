@@ -18,8 +18,13 @@ $(document).ready(function() {
     event.preventDefault();
     var inputtedSize = parseInt($("#size").val());
     alert(inputtedSize);
-    var inputtedToppings = $("input:checkbox[name=top]:checked").val();
+    var inputtedToppings = [];
+    $("input:checkbox[name=top]:checked")each(function(){
+      var topping = $(this).val();
+      inputtedToppings.push(topping);
+//going back and checking the transportation assignment to try and get checkboxes to work
     alert(inputtedToppings);
+
     var customPizza= new Pizza(inputtedSize, inputtedToppings);
     console.log(customPizza.cost);
     $("#show-pizza").append("<li>"+ customPizza +" "+ "<br>" + "</li>");
@@ -27,4 +32,5 @@ $(document).ready(function() {
   // clears user-input fields
   $("form")[0].reset();
   });
+});
 });
