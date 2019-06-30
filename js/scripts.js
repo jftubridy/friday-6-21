@@ -2,15 +2,10 @@
 function Pizza(size, toppings, cost) {
   this.size = size,
   this.toppings = toppings;
-  // this.cost = this.size + this.toppings.length
+  //this.cost = 0;
 }
 
-// puts pizza price together
-Pizza.prototype.cost = function() {
-  this.size + this.toppings.length;
-}
-
-Pizza.prototype.cost = function(){
+Pizza.prototype.sizePrice = function(){
   if (this.size == "Small") {
     this.cost = 1;
   } else if (this.size == "Medium") {
@@ -18,35 +13,37 @@ Pizza.prototype.cost = function(){
   } else if (this.size == "Large") {
     this.cost = 3;
   } else {this.cost = 4;
-  }
+  } console.log("this.cost at sizePrice "+this.cost);
 }
 
+Pizza.prototype.numTop = function() {
+  if (this.toppings.length >= 0) {
+    this.cost += (this.toppings.length);
+  console.log("this.cost at numTop " +this.cost);
+  }
+}
 
 $(document).ready(function() {
   // attachContactListeners();
   $("form#newPizza").submit(function(event) {
     event.preventDefault();
     var inputtedSize = ($("#size").val());
-    console.log(inputtedSize);
-    //debugger;
     var inputtedToppings = [];
-    // function numTop() {
-      // toppings.push("input:checkbox[name=top]:checked").value();
     $("input:checkbox[name=top]:checked").each(function(){
       var topping = $(this).val();
       inputtedToppings.push(topping);
-      console.log("inputtoppings "+inputtedToppings);
-      console.log("top[]length "+inputtedToppings.length);
-//going back and checking the transportation assignment to try and get checkboxes to work
-    console.log("topping " + topping);
+
   });
 
     var customPizza= new Pizza(inputtedSize, inputtedToppings);
-    console.log(customPizza.size);
     $("#custSize").text(customPizza.size);
+    console.log("size value " + customPizza.size);
     $('#custToppings').text(customPizza.toppings);
-    $('#custCost').text("$"+$(parseInt(customPizza.cost)) + $(parseInt(customPizza.toppings.length)));
-    console.log(toppings.length);
+    console.log("customPizza.topping " + customPizza.toppings);
+    customPizza.sizePrice();
+    customPizza.numTop();
+    $('#custCost').text("$"+customPizza.cost);
+    console.log("customPizza.cost "+customPizza.cost);
   // clears user-input fields
   $("form")[0].reset();
 });
