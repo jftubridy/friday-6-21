@@ -14,6 +14,7 @@ A website created with Javascript, CSS, and HTML where a user select options to 
 | :-------------     | :------------- | :------------- |
 | **Gathers user input** | User selects "large". | Puts the value for large into the constructor |
 | **Gathers user input for toppings** | User selects: "pepperoni", "mushrooms" | Gives "pepperoni" and "mushrooms" to the constructor for toppings. |
+| **Combines costs of Pizza and Toppings to provide a cost** | User selects: "Large"; "Pepperoni, mushrooms" | Gives $5 |
 
 ## Setup/Installation Requirements
 
@@ -21,7 +22,7 @@ A website created with Javascript, CSS, and HTML where a user select options to 
 2. Open index.html in a web browser.
 
 ## Known Bugs
-* It does not work at this time.
+* There are no known bugs at this time.
 
 ## Technologies Used
 * HTML
@@ -30,7 +31,7 @@ A website created with Javascript, CSS, and HTML where a user select options to 
 
 ## Support and contact details
 
-_Email no one with any questions, comments, or concerns._
+_Email jftubridy@gmail.com with any questions, comments, or concerns._
 
 ### License
 
