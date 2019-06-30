@@ -1,0 +1,14 @@
+Good work! You're closer than you think. Continue working on this and resubmit by Monday July 1st.
+
+The main thing I see is input from the user is coming in undefined. 
+Work on that first and the rest of the application might fall into place better. 
+You got your size coming in as a string and toppings coming in as an array. 
+Check that the input is correct by using console.log().
+
+Also remember that your var customPizza is an object that has size and toppings as properties. 
+So if you want to get the size the user selected then it would be customPizza.size.
+
+What you need to do to pass: 1) Application works as expected with required functionality. Don't worry about styling. 
+2) Make a ReadMe
+
+Let me know if you want to meet to go cover any object concepts.
