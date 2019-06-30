@@ -19,10 +19,10 @@
           <form id="newPizza">
             <!-- size -->
             <select class="form-control" id="size">
-              <option value="1">Small: $1</option>
-              <option value="2">Medium: $2</option>
-              <option value="3">Large: $3</option>
-              <option value="4">Party: $4</option>
+              <option value="Small">Small: $1</option>
+              <option value="Medium">Medium: $2</option>
+              <option value="Large">Large: $3</option>
+              <option value="Party">Party: $4</option>
             </select>
             <!-- toppings-->
             <h3>Each Additional Topping is $1</h3>
@@ -61,11 +61,11 @@
         </div>
         <div class="col-md-6">
           <div id="show-pizza">
-            <p>Size: <span class="size"></span></p>
-            <p>Toppings: <span class="toppings"></span></p>
+            <p>Size: <span id="custSize"></span></p>
+            <p>Toppings: <span id="custToppings"></span></p>
             <ul id="toppings">
             </ul>
-            <p>Cost: <span class="cost"></span></p>
+            <p>Cost: <span id="custCost"></span></p>
 
             <!-- <div id="buttons">
             </div> -->
